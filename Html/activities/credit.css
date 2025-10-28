@@ -1,0 +1,224 @@
+*{
+    margin:0px;
+    padding:0px;
+    
+    .creditCard {
+      width: 100%;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      border: 1px solid black;
+      border-radius: 4px;
+      position: relative;
+      z-index: 10;
+      overflow: hidden;
+      background: #fff;
+    }
+    
+    .imagecard {
+      width: 40%;
+      height: auto;
+      position: relative;
+      margin: 0;         /* Remove margin */
+      left: 0;           /* Remove left offset */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .creditcardimg {
+      width: 100%;
+      height: auto;
+      position: relative;
+      top: 0;            /* Remove top offset */
+      overflow: hidden;
+      z-index: 7;
+      padding-bottom: 0;
+      margin-right: 0;
+      border-radius: 4px 0 0 4px;
+    }
+    
+    .content {
+      width: 60%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      padding: 30px 20px 30px 20px;
+      box-sizing: border-box;
+    }
+    
+    /* Responsive Design for all screens */
+    @media (max-width: 800px) {
+      .creditCard {
+        flex-direction: column;
+        max-width: 95vw;
+        width: 100%;
+        padding: 0;
+      }
+      .imagecard {
+        width: 100%;
+        margin: 0;
+        left: 0;
+        border-radius: 4px 4px 0 0;
+      }
+      .creditcardimg {
+        width: 100%;
+        border-radius: 4px 4px 0 0;
+      }
+      .content {
+        width: 100%;
+        padding: 20px 10px;
+        align-items: center;
+        text-align: center;
+      }
+    }
+}
+
+.creditCard {
+    width: auto;
+  height: auto;
+  margin: 60px;
+  padding: 0px 20px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  
+  border: 1px solid black;
+  border-radius: 4px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.imagecard {
+  height: 100%;
+  position: relative;
+  left:-20%;
+  margin-top:10%;
+}
+
+.creditcardimg {
+    
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 10px;
+  overflow: hidden;
+  z-index: 7;
+  padding-bottom: 0px;
+  margin-right:0px;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 30px 10px 20px 0px;
+}
+
+.content h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  position: fixed;
+  display: none;
+  cursor: pointer;
+  width: 10px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #0b66e5;
+  color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.creditCard:hover button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #0b66e5;
+  color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+a{
+  text-decoration: none;
+}
+
+.fa-circle {
+  font-size: 8px;
+}
+
+.creditCard:hover {
+  background-color: #0b66e5;
+  color: white;
+  border: none;
+  transition: transform 3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover {
+  color: white;
+  background-color: #0b66e5;
+}
+
+.content p:hover {
+  color: white;
+  background-color: #0b66e5;
+}
+
+
+/* Responsive Design for smaller screens 
+@media (max-width: 800px) {
+  .creditCard {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: auto;
+  }
+
+  .imagecard {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    left: 10px;
+  }
+
+  .creditcardimg {
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+} 
+*/

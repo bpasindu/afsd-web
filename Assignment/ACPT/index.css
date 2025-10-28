@@ -1,0 +1,903 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  /* width: 100vw; */
+}
+
+.header-white-part {
+  color: #5c5c77;
+  width: 98%;
+  height: 20px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.white-left-part {
+  z-index: 11;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.telephone {
+  color: #5c5c77;
+  text-decoration: none;
+}
+
+ul {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  list-style-type: none;
+}
+
+.fa-brands {
+  color: #5c5c77;
+}
+
+.white-right-part {
+  z-index: 11;
+  position: relative;
+}
+
+.certificate {
+  color: #5c5c77;
+  text-decoration: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top:0px;
+  z-index:1;
+}
+
+.navleft {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.nav-right {
+  background-color: #21b674;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 68%;
+}
+
+.nav-right ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  list-style-type: none;
+  align-items: center;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  padding: 25px 0;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.nav-right a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+/* Active page underline */
+.nav-right a.active::after {
+  width: 100%;
+}
+
+/* Hide active underline when hovering over navbar */
+.nav-right:hover a.active::after {
+  width: 0;
+}
+
+/* Show underline on hover */
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+/* Make active link slightly bolder */
+.nav-right a.active {
+  font-weight: 700;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+/* Dark overlay */
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 35%;
+  left: 60px;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.apply-btn {
+  background-color: #21b674;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #1a9460;
+}
+
+/* Manual control - slide to correct position */
+#slide1:checked ~ .slides {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Active dot styling */
+#slide1:checked ~ .carousel-dots label:nth-child(1),
+#slide2:checked ~ .carousel-dots label:nth-child(2),
+#slide3:checked ~ .carousel-dots label:nth-child(3) {
+  background-color: #21b674;
+}
+
+/* Add this to the .slides class */
+.slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: autoSlide 15s infinite;
+}
+
+@keyframes autoSlide {
+  0%,
+  30% {
+    transform: translateX(0);
+  }
+  33.33%,
+  63.33% {
+    transform: translateX(-100%);
+  }
+  66.66%,
+  96.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Remove the manual control transform rules or they will conflict */
+
+.cardimg {
+  width: 100%;
+  max-width: 100vw;
+  height: 1000px;
+  position: absolute;
+}
+
+.scrl {
+  height: 1500px;
+}
+/* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100vw;
+}
+
+.header-white-part {
+  color: #5c5c77;
+  width: 98%;
+  height: 20px;
+  padding: 10px;
+  border: 1px black solid;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.white-left-part {
+  border: 1px black solid;
+  z-index: 11;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.telephone {
+  color: #5c5c77;
+  text-decoration: none;
+}
+
+ul {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  list-style-type: none;
+}
+
+.fa-brands {
+  color: #5c5c77;
+}
+
+.white-right-part {
+  border: 1px black solid;
+  z-index: 11;
+  position: relative;
+}
+
+.certificate {
+  color: #5c5c77;
+  text-decoration: none;
+}
+
+.navbar {
+  border: 2px red solid;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navleft {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.nav-right {
+  background-color: #21b674;
+  border: 2px rgb(183, 255, 0) solid;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 68%;
+}
+
+.nav-right ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  list-style-type: none;
+  align-items: center;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  padding: 25px 0;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.nav-right a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+/* Active page underline */
+.nav-right a.active::after {
+  width: 100%;
+}
+
+/* Hide active underline when hovering over navbar */
+.nav-right:hover a.active::after {
+  width: 0;
+}
+
+/* Show underline on hover */
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+/* Make active link slightly bolder */
+.nav-right a.active {
+  font-weight: 700;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300%;
+  transform: translateY(0);
+  transition: transform 0.6s ease-in-out;
+  animation: autoSlide 15s infinite;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  flex-shrink: 0;
+}
+
+/* Dark overlay */
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 35%;
+  left: 60px;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.apply-btn {
+  background-color: #21b674;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #1a9460;
+}
+
+/* Manual control - slide to correct position (vertical) */
+#slide1:checked ~ .slides {
+  transform: translateY(0);
+  animation: none;
+}
+
+#slide2:checked ~ .slides {
+  transform: translateY(-800px);
+  animation: none;
+}
+
+#slide3:checked ~ .slides {
+  transform: translateY(-1600px);
+  animation: none;
+}
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Active dot styling */
+#slide1:checked ~ .carousel-dots label:nth-child(1),
+#slide2:checked ~ .carousel-dots label:nth-child(2),
+#slide3:checked ~ .carousel-dots label:nth-child(3) {
+  background-color: #21b674;
+}
+
+/* Vertical auto-slide animation */
+@keyframes autoSlide {
+  0%,
+  30% {
+    transform: translateY(0);
+  }
+  33.33%,
+  63.33% {
+    transform: translateY(-800px);
+  }
+  66.66%,
+  96.66% {
+    transform: translateY(-1600px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.cardimg {
+  width: 100%;
+  max-width: 100vw;
+  position: absolute;
+}
+
+.scrl {
+  height: 1500px;
+}
+
+.teaching {
+  display: flex;
+}
+
+.image-teach {
+  float: left;
+  width: 35vw;
+  height: auto;
+  position: relative;
+  top: 80px;
+}
+
+.features {
+  float: right;
+  width: 65vw;
+  position: relative;
+  top: -50px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-feat {
+  padding: 50px;
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-feat > .fa-solid {
+  font-size: 50px;
+  color: #21b674;
+  display: inline-block;
+}
+
+.card-feat > h2 {
+  color: #1e1e4b;
+}
+
+.card-feat > p {
+  font-weight: 400;
+  color: #5c5c88;
+  font-size: 15px;
+  line-height: 1.9;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-acpt {
+  display: flex;
+  margin-top: 80px;
+  padding: 40px;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-para > h1 {
+  color: #1e1e4b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.about-para > p {
+  font-weight: 400;
+  color: #5c5c88;
+  font-size: 15px;
+  line-height: 1.9;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Green Button */
+
+.green-btn {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  padding: 15px 40px;
+  border-radius: 0;
+  font-weight: 500;
+  border: 0;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.green-btn-outline {
+  color: #21b674;
+  background-color: transparent;
+  border: 1px solid #21b674;
+}
+
+.about-imge {
+  float: right;
+  width: 500px;
+}
+
+.training-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.training-head > h1 {
+  color: #1e1e4b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.training-head > hr {
+  color: #5c5c77;
+  width: 50%;
+}
+
+.training-cont {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.training-card {
+  width: 25%;
+  border: 0.5px rgb(184, 169, 169) solid;
+  padding: 40px;
+  margin: 20px;
+}
+
+.training-card > fa-thin {
+  color: red;
+  font-size: 30px;
+}
+
+.training-img {
+  width: 400px;
+}
+
+.training-card > .fa-solid {
+  color: #5c5c77;
+  display: inline-block;
+}
+
+.training-card > .physical {
+  display: flex;
+  justify-content: space-between;
+  color: #5c5c77;
+}
+
+h2 > a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.training-card > p {
+  font-weight: 400;
+  color: #5c5c88;
+  font-size: 15px;
+  line-height: 1.9;
+  font-family: "Poppins", sans-serif;
+}
+
+.training-card > h3 {
+  color: #212529;
+  font-size: 15px;
+  line-height: 1.9;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.mid-green-btn {
+  color: #fff;
+  background-color: #21b674;
+  font-size: 14px;
+  padding: 10px 35px;
+}
+
+.read-card > a {
+  text-decoration: none;
+  color: #21b674 !important;
+}
+
+.training-card > .read-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.green-box {
+  width: 100%;
+  height: 350px;
+  background-color: #21b674 !important;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: larger;
+}
+
+.green-box > .green-btn-outline {
+  color: #21b674;
+  background-color: white;
+}
+
+.sucess {
+  height: 600px;
+  background-image: url("./assets/library.png");
+  linear-gradient(rgba(0, 0, 255, 0.4), rgba(0, 0, 255, 0.4));
+  position:relative;
+  overflow:hidden;
+  margin-bottom:50px;
+}
+
+.sucess-img {
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+  z-index:2;
+  position:absolute;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #21B674;
+  position: absolute;
+  border-radius: 50%;
+  top:250px;
+  left:150px;
+  z-index:10;
+}
+
+.fa-play {
+  font-size: 50px;
+  color: white;
+  position:relative;
+  top:25%;
+  left:20%;
+}
+
+.sucess-pera{
+  height:350px;
+  width:500px;
+  background-color: white;
+  color:#5c5c77;
+  z-index:100;
+  position:relative;
+  top:50px;
+  left:700px;
+  padding:50px;
+  font-size: larger;
+}
+
+.sucess-pera > h1{
+  margin-bottom:40px;
+}
+
+.event-cont{
+  position:relative;
+  margin-top:-40px;
+}
+
+.date-box{
+  width:80px;
+  height:80px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+    background: #21b674;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    top: 30px;
+    left: 20px;
+    text-transform: uppercase;
+}
+
+.event-card{
+  border:none;
+  position:relative;
+}
+
+.event-card > .physical{
+  justify-content: flex-start;  
+  gap:10px;
+  margin-bottom:20px;
+}
+

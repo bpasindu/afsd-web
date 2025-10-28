@@ -1,0 +1,12 @@
+.card{
+    width:600px;
+    border:2px blue solid;
+    padding:20px;
+    margin:30px;
+}
+
+.midh1{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}

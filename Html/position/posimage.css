@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.image1 {
+  height: 250px;
+  width: 600px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  margin: 30px;
+  position: relative;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  position: absolute;
+}
+
+.black-box {
+  height: 250px;
+  width: 600px;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+}
+
+h1 {
+  color: white;
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}

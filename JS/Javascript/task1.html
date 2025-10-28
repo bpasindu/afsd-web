@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task1</title>
+    <link rel="stylesheet" href="./task1.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <h1>1.</h1>
+      <div class="mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="number1"
+          placeholder="Input number 1"
+        
+        >
+        <br /><br />
+        <input
+          type="number1"
+          class="form-control"
+          id="number2"
+          placeholder="Input number 2"
+        >
+      </div>
+      <h1 id="total" class="midh1"></h1>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button" onclick="addTwo()"> Button </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>2.</h1>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="text1"
+          placeholder="Input text 1"
+        
+        >
+        <br /><br />
+        <input
+          type="text"
+          class="form-control"
+          id="text2"
+          placeholder="Input text 2"
+        >
+      </div>
+      <h1 class="midh1" id="total2"></h1>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button" onclick="seeEqual()"> Button </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>3.</h1>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="text3"
+          placeholder="Input text 1"
+        >
+        <br/><br />
+      </div>
+      <h1 id="total3" class="midh1"></h1>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button" onclick="changeText()"> Button </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>4.</h1>
+      <div class="mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="number4"
+          placeholder="Input numbers"
+          onkeyup="addNum()"
+        >
+        <br/><br />
+      </div>
+      <h1 id="total4" class="midh1"></h1>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button" > Button </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>5.</h1>
+      <div class="mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="number5"
+          placeholder="Input mark"
+        >
+        <br/>
+      </div>
+      <h1 id="total5" class="midh1"></h1>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button" onclick="calculateGrade()"> Submit </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>6.</h1>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="number6"
+          placeholder="Input keyword"
+        >
+        <br/>
+      </div>
+      <h1 id="total6" class="midh1"></h1>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button" onclick="showPosition()"> Submit </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>7.</h1>
+      <div class="mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="number7"
+          placeholder="Input number"
+        >
+      </div>
+      <h1 id="total7" class="midh1"></h1>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button" onclick="pushToArray()"> push </button>
+        <button class="btn btn-primary" type="button" onclick="showArray()"> Submit </button>
+      </div>
+      
+    </div>
+
+    <div class="card">
+      <h1>8.</h1>
+      <h1 id="total8" class="midh1"></h1>
+      <div class="mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="number8"
+          placeholder="Input number"
+        >
+        <br/>
+      </div>
+      <h1 id="total81" class="midh1"></h1>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button" onclick="seeDividingNumbers()"> Submit </button>
+      </div>
+    </div>
+
+    <script src="./task1.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

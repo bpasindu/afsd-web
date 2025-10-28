@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="./event.css" />
+  </head>
+  <body >
+    <h1 >Events</h1>
+
+    <button onclick="clickEvent()">Click mee</button>
+    <div id="color-change"></div>
+    <br /><br />
+
+    <button onclick="clickBlue()">Click Blue</button>
+    <button onclick="clickRed()">Click Red</button>
+
+    <br /><br />
+
+    <div id="mouseEvent" onmouseover="mouseIn()" onmouseout="mouseOut()"></div>
+    <script src="./events.js"></script>
+
+    <br /><br />
+    <hr />
+
+    <div id="image-box" onmouseover="mouseIn()" onmouseout="mouseOut()"></div>
+    <br /><br />
+    <hr />
+
+    <div id="image-box2"  >
+        <img src="../assetsImage/chat-c-1.png" alt="image2" id="image2" onmouseover="mouseIn()" onmouseout="mouseOut()">
+    </div>
+
+    <input type="text" id="name" onkeydown="keyDownEvent()" onkeypress="keyPressEvent ()" onkeyup="keyUpEvent ()">
+    <h1 id="display1"></h1>
+
+    <div id="display2"></div>
+
+  </body>
+</html>

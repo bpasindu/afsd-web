@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Form1</title>
+  </head>
+  <body>
+    <h2>Basic Html Form</h2>
+
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>My Personal Details :</legend>
+        <label for="firstName">First Name :</label>
+        <input type="text" name="firstName" id="firstName" />
+        <br />
+        <br />
+
+        <label for="lastName">Last Name : </label>
+        <input type="text" name="lastName" id="lastName" />
+        <br />
+        <br />
+
+        <label for="birthDate">Birth Day :</label>
+        <input type="date" name="birthDay" id="birthDate" />
+        <br />
+        <br />
+
+        <label for="gender">Select your Gender :</label>
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <br />
+        <br />
+
+        <label for="drink">Choose drink :</label>
+        <input type="radio" name="drink" value="coffee" checked="checked" />
+        Coffee
+        <input type="radio" name="drink" value="tea" />
+        Tea
+        <input type="radio" name="drink" value="hotChocolate" />
+        Hot Chocholate
+        <br />
+        <br />
+
+        <label for="icecream">What ice cream do you like?</label>
+        <br />
+        <input type="checkbox" name="ice1" value="Chocolate" />
+        Chocolate
+        <br />
+        <input type="checkbox" name="ice2" value="Chocolate Pudding" />
+        Chocolate Pudding
+        <br />
+        <input type="checkbox" name="ice3" value="Chocolate Peanut Butter" />
+        Chocolate Peanut Butter
+        <br />
+        <input type="checkbox" name="ice4" value="Strawberry" />
+        Strawberry
+        <br />
+        <br />
+
+        <label for="school">Select a school</label>
+        <select name="school">
+          <option value="harvard">Harvard</option>
+          <option value="oxford">Oxford</option>
+        </select>
+        <br />
+        <br />
+
+        <input type="submit" value="Submit My Form" />
+      </fieldset>
+    </form>
+
+    <a href="https://www.web.com/">web.com </a>
+    <a href="https://www.facebook.com/" target="_blank">&emsp; facebook.com &emsp;</a>
+    <a href="https://www.youtube.com/">youtube.com </a>
+    <br />
+
+    <p>Hello&nbsp;World (non-breaking space)</p>
+<p>Hello&ensp;World (en space)</p>
+<p>Hello&emsp;World (em space)</p>
+<p>Hello&thinsp;World (thin space)</p>
+
+
+    <img
+      src="./Assets/image1.png"
+      alt="A family of 4 members"
+      width="200px"
+      height="150px"
+    />
+    <img
+      src="./Assets/image2.png"
+      alt="An award of excellence"
+      width="200px"
+      height="150px"
+    />
+
+    <h3>View My Web</h3>
+    <iframe
+      src="https://acpt.lk/contact.html"
+      width="400px"
+      height="200px"
+      title="acpt website"
+    ></iframe>
+
+    <fieldset>
+      <h3>My Videos</h3>
+      <iframe
+        src="https://www.youtube.com/embed/Sw8LzbERq7c"
+        width="400px"
+        height="200px"
+        title="youtube vedio"
+      ></iframe>
+    </fieldset>
+  </body>
+</html>

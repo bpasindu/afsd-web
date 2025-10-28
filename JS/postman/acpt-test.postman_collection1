@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "35866567-894a-4f7d-a45f-ffb64aa6c557",
+		"name": "acpt-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24208086"
+	},
+	"item": [
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "save student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "309|EbonvLfb3MVWsscZiuDHWM4tDSLLonFGJGR6I52C4bab1e79",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "student_name",
+									"value": "malidu",
+									"type": "text"
+								},
+								{
+									"key": "student_age",
+									"value": "34",
+									"type": "text"
+								},
+								{
+									"key": "student_address",
+									"value": "matara",
+									"type": "text"
+								},
+								{
+									"key": "student_contact",
+									"value": "0754585758",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://student-api.acpt.lk/api/student/save",
+							"protocol": "https",
+							"host": [
+								"student-api",
+								"acpt",
+								"lk"
+							],
+							"path": [
+								"api",
+								"student",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "303|AYsdWODxvbgfT2JcZC4FM5DyzpwX9LceHwfZ9L7o8288f82d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://student-api.acpt.lk/api/student/delete/155",
+							"protocol": "https",
+							"host": [
+								"student-api",
+								"acpt",
+								"lk"
+							],
+							"path": [
+								"api",
+								"student",
+								"delete",
+								"155"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "309|EbonvLfb3MVWsscZiuDHWM4tDSLLonFGJGR6I52C4bab1e79",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://student-api.acpt.lk/api/student/getAll",
+							"protocol": "https",
+							"host": [
+								"student-api",
+								"acpt",
+								"lk"
+							],
+							"path": [
+								"api",
+								"student",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|AAmJIuTlTftACgp4E7GVaXNC65cXWmHlOF3DPipB292432ed",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "student_name",
+									"value": "madun",
+									"type": "text"
+								},
+								{
+									"key": "student_age",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "student_address",
+									"value": "mataras",
+									"type": "text"
+								},
+								{
+									"key": "student_contact",
+									"value": "0754585759",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://student-api.acpt.lk/api/student/update/5",
+							"protocol": "https",
+							"host": [
+								"student-api",
+								"acpt",
+								"lk"
+							],
+							"path": [
+								"api",
+								"student",
+								"update",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "chamikara",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "chamikara12345@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://student-api.acpt.lk/api/register",
+							"protocol": "https",
+							"host": [
+								"student-api",
+								"acpt",
+								"lk"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "chamikara12345@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://student-api.acpt.lk/api/login",
+							"protocol": "https",
+							"host": [
+								"student-api",
+								"acpt",
+								"lk"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "log out",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://test.acpt.lk/api/logout",
+							"protocol": "https",
+							"host": [
+								"test",
+								"acpt",
+								"lk"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
